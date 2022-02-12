@@ -112,3 +112,74 @@ class nonterminal(Enum):
     FACOR = "FACTOR"  # G
     COMPONTENT = "COMPONTENT"  # C
     ATOM = "ATOM"  # A
+    
+def tra(c):
+    if c=='B':
+        return nonterminal.BEGIN
+    elif c=='P':
+        return nonterminal.PROGRAM
+    elif c=="S":
+        return nonterminal.STATEMENT
+    elif c=="O":
+        return nonterminal.ORIGINSTATEMENT
+    elif c=="U":
+        return nonterminal.SCALESTATEMENT
+    elif c=="R":
+        return nonterminal.ROTSTATEMENT
+    elif c=="F":
+        return nonterminal.FORSTATEMENT
+    elif c=="E":
+        return nonterminal.EXPRESSION
+    elif c=="T":
+        return nonterminal.TERM
+    elif c=="G":
+        return nonterminal.FACOR
+    elif c=="C":
+        return nonterminal.COMPONTENT
+    elif c=="A":
+        return nonterminal.ATOM
+    elif c=="o":
+        return TokenType.ORIGIN
+    elif c=="p":
+        return TokenType.IS
+    elif c=="q":
+        return TokenType.SCALE
+    elif c=="r":
+        return TokenType.ROT
+    elif c=="f":
+        return TokenType.FOR
+    elif c=="t":
+        return TokenType.T
+    elif c=="a":
+        return TokenType.FROM
+    elif c=="b":
+        return TokenType.TO
+    elif c=="c":
+        return TokenType.STEP
+    elif c=="d":
+        return TokenType.DRAW
+    elif c == "u":
+        return TokenType.FUNC
+    elif c == "g":
+        return TokenType.CONST_ID
+    elif c == ";":
+        return TokenType.SEMICO
+    elif c == "(":
+        return TokenType.L_BRACKET
+    elif c == ")":
+        return TokenType.R_BRACKET
+    elif c == ",":
+        return TokenType.COMMA
+    elif c == "+":
+        return TokenType.PLUS
+    elif c == "-":
+        return TokenType.MINUS
+    elif c == "*":
+        return TokenType.MUL
+    elif c == "/":
+        return TokenType.DIV
+    elif c == "@":
+        return TokenType.POWER
+    elif c == "#":
+        return TokenType.NONTOKEN
+
