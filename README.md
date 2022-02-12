@@ -67,7 +67,7 @@ rot is 0;
 scale is (1, 1);
 ```
 ---
-##规约产生式
+## 规约产生式
 
 0. B->P
 1. A->c
@@ -96,3 +96,19 @@ scale is (1, 1);
 24. T->T/G
 25. T->G
 
+---
+## 对照表
+```python
+class nonterminal(Enum):
+    BEGIN = "BEHIN"  # B
+    PROGRAM = "PROGRAM"  # P
+    STATEMENT = "STATEMENT"  # S
+    ORIGINSTATEMENT = "ORIGINSTATEMENT"  # O
+    SCALESTATEMENT = "SCALESTATEMENT"  # U
+    ROTSTATEMENT = "ROTSTATEMENT"  # R
+    FORSTATEMENT = "FORSTATEMENT"  # F
+    EXPRESSION = "EXPRESSION"  # E
+    TERM = "TERM"  # T
+    FACOR = "FACTOR"  # G
+    COMPONTENT = "COMPONTENT"  # C
+    ATOM = "ATOM"  # A
