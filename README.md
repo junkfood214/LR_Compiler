@@ -66,4 +66,49 @@ origin is (0, 0);
 rot is 0;
 scale is (1, 1);
 ```
+---
+## 规约产生式
 
+0. B->P
+1. A->c
+2. A->t
+3. A->u(E)
+4. A->(E)
+5. C->A@C
+6. C->A
+7. E->E+T
+8. E->E-T
+9. E->T
+10. F->ftaEbEcEd(E,E)
+11. G->+G
+12. G->-G
+13. G->C
+14. O->op(E,E)
+15. P->S;P
+16. P->
+17. R->rpE
+18. S->qp(E,E)
+19. S->U
+20. S->R
+21. S->F
+22. S->O
+23. T->T*G
+24. T->T/G
+25. T->G
+
+---
+## 对照表
+```python
+class nonterminal(Enum):
+    BEGIN = "BEHIN"  # B
+    PROGRAM = "PROGRAM"  # P
+    STATEMENT = "STATEMENT"  # S
+    ORIGINSTATEMENT = "ORIGINSTATEMENT"  # O
+    SCALESTATEMENT = "SCALESTATEMENT"  # U
+    ROTSTATEMENT = "ROTSTATEMENT"  # R
+    FORSTATEMENT = "FORSTATEMENT"  # F
+    EXPRESSION = "EXPRESSION"  # E
+    TERM = "TERM"  # T
+    FACOR = "FACTOR"  # G
+    COMPONTENT = "COMPONTENT"  # C
+    ATOM = "ATOM"  # A
